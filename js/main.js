@@ -44,7 +44,7 @@ const parent = document.querySelector('.menu__body');
 const item = document.querySelector('.header__feedback');
 
 function itemActivitiesForward() {
-    parent.insertBefore(item, parent.children[1]);
+    parent.insertBefore(item, parent.children[2]);
     item.classList.add('done');
 }
 function itemActivitiesBack() {
