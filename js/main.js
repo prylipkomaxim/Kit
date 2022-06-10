@@ -109,6 +109,8 @@ if (isMobile.any()) {
 } else {
     document.body.classList.add('_pc')
 }
- $(document).ready(function() {
-    $("#phone").mask("+7 (999) 99-99-999");
+$(document).ready(function() {
+    $("#phone-1").mask("+7 (999) 99-99-999");
+    $("#phone-2").mask("+7 (999) 99-99-999");
+    
 })
