@@ -1,3 +1,5 @@
+'use strict'
+
 const menuBody = document.querySelector('.menu__body');
 const menuIcon = document.querySelector('.menu__icon');
 const body = document.body;
@@ -107,5 +109,6 @@ if (isMobile.any()) {
 } else {
     document.body.classList.add('_pc')
 }
-'use strict'
-
+ $(document).ready(function() {
+    $("#phone").mask("+7 (999) 99-99-999");
+})
