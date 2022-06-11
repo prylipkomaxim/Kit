@@ -114,3 +114,15 @@ $(document).ready(function() {
     $("#phone-2").mask("+7 (999) 99-99-999");
     
 })
+
+const spoilerTitles = document.querySelectorAll('[data-name="spoiler-title"]'); 
+
+if (spoilerTitles) {
+    for ( let i = 0; i < spoilerTitles.length; i++) {
+        const spoilerTitle = spoilerTitles[i]; console.log(spoilerTitle);
+        spoilerTitle.addEventListener('click', function() {
+            this.nextElementSibling.classList.toggle('spoiler-body');
+            this.classList.toggle('spoiler-open')
+        })
+    }
+}
