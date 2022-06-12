@@ -112,7 +112,7 @@ if (isMobile.any()) {
 $(document).ready(function() {
     $("#phone-1").mask("+7 (999) 99-99-999");
     $("#phone-2").mask("+7 (999) 99-99-999");
-    
+    $("#phone-3").mask("+7 (999) 99-99-999");
 })
 
 const spoilerTitles = document.querySelectorAll('[data-name="spoiler-title"]'); 
