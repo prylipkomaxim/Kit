@@ -114,6 +114,7 @@ $(document).ready(function() {
     $("#phone-2").mask("+7 (999) 99-99-999");
     $("#phone-3").mask("+7 (999) 99-99-999");
     $("#phone-4").mask("+7 (999) 99-99-999");
+    $("#phone-5").mask("+7 (999) 99-99-999");
 })
 
 const spoilerTitles = document.querySelectorAll('[data-name="spoiler-title"]'); 
@@ -126,4 +127,40 @@ if (spoilerTitles) {
             this.classList.toggle('spoiler-open')
         })
     }
+}
+const popup = document.querySelector('.popup');
+const popupSecond = document.querySelector('.popup-2');
+const popupBtn = document.querySelector('.header__request');
+const closeBtn = document.querySelector('.popup__close');
+const popupBody = document.querySelector('.popup__body');
+const popupForm = document.querySelector('.popup__request-form');
+const closeBtnSecond = document.querySelector('.popup-2__close');
+const popupBodySecond = document.querySelector('.popup-2__body');
+
+if(popupBtn) {
+    popupBtn.addEventListener('click', () => {
+        popup.classList.add('popup-active')
+    })
+    closeBtn.addEventListener('click', () => {
+        popup.classList.remove('popup-active')
+    })
+        
+    popup.addEventListener('click', (e) => {
+        if (!e.target.closest('.popup__body')) {
+            popup.classList.remove('popup-active')
+        }
+    })
+    popupForm.addEventListener('submit', (e) => {
+        popup.classList.remove('popup-active');
+        popupSecond.classList.add('popup-active');
+        e.preventDefault();
+    })
+    closeBtnSecond.addEventListener('click', () => {
+        popupSecond.classList.remove('popup-active')
+    })
+    popupSecond.addEventListener('click', (e) => {
+        if (!e.target.closest('.popup-2__body')) {
+            popupSecond.classList.remove('popup-active')
+        }
+    })
 }
